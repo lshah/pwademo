@@ -80,7 +80,7 @@ self.addEventListener('notificationclick', event=>{
 	if(event.action === 'close'){
 		notification.close();
 	} else {
-		clients.openWindow('http://127.0.0.1:8080/another-blog.html');
+		clients.openWindow('https://lshah.github.io/pwademo/another-blog.html');
 		notification.close();
 	}
 })

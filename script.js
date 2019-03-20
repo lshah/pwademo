@@ -25,9 +25,7 @@
     vibrate: [100, 50, 100],
     actions: [
       {action: 'explore',
-      title: 'Go to next article'},
-      {action: 'close',
-      title: 'Close notification'}
+      title: 'Go to next article'}
     ],
     data: {primaryKey: 1}
   };
