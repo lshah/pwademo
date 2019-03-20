@@ -51,16 +51,26 @@ width: 100%;
 
 @media only screen and (max-width: 1024px){
   .main-container {
-    width: 85%;
+    width: 95%;
     margin: 6px auto;
   }
 
   img {
-    width: 85%;
+    width: 95%;
   }
 }
 
 @media only screen and (max-width: 960px){
+  .main-container {
+    width: 85%;
+    margin: 6px auto;
+  }
+  img {
+    height: 85%;
+  }
+}
+
+@media only screen and (max-width:700px){
   .main-container {
     width: 75%;
     margin: 6px auto;
@@ -70,22 +80,12 @@ width: 100%;
   }
 }
 
-@media only screen and (max-width:700px){
+@media only screen and (max-width:550px){
   .main-container {
     width: 65%;
     margin: 6px auto;
   }
   img {
     height: 65%;
-  }
-}
-
-@media only screen and (max-width:550px){
-  .main-container {
-    width: 55%;
-    margin: 6px auto;
-  }
-  img {
-    height: 85%;
   }
 }
