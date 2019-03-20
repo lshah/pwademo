@@ -14,6 +14,33 @@
     })
   }
 
+  Notification.requestPermission((status) => {
+    console.log('Notification persmission status: ', status);
+  }
+  );
+
+  let notificationOptions = {
+    body: "n.o.t.i.f.i.c.a.t.i.o.n",
+    icon: "images/icons/icon-72x72.png",
+    vibrate: [100, 50, 100],
+    actions: [
+      {action: 'explore',
+      title: 'Go to next article'},
+      {action: 'close',
+      title: 'Close notification'}
+    ],
+    data: {primaryKey: 1}
+  };
+
+  let displayNotification = () => {
+    if(Notification.permission === 'granted'){
+      navigator.serviceWorker.getRegistration()
+      .then(reg => reg.showNotification('Hello World', notificationOptions))
+    }
+  }
+
+  displayNotification();
+
 // let imageRequest = new Request('https://lshah.github.io/images/abstract-art-2.jpg',{
 //   method: 'GET',
 //   mode: 'cors',

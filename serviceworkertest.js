@@ -1,4 +1,4 @@
-let cacheName = 'v2';
+let cacheName = 'v5';
 let cacheFiles = [
 				'./',
 				'./index.html',
@@ -7,7 +7,7 @@ let cacheFiles = [
 				'./styles.css',
 				'./img/sample-image-2.jpg',
 				'./img/sample-image-5.jpg',
-				'https://fonts.googleapis.com/css?family=Roboto',
+				// 'https://fonts.googleapis.com/css?family=Roboto',
 				'./favicon-32x32.png',
 				'./favicon.ico'
 			]
@@ -67,3 +67,20 @@ self.addEventListener('fetch', event => {
 		})
 	);
 });
+
+self.addEventListener('notificationclose', event=>{
+	let notification = event.notification;
+	let primaryKey = notification.data.primaryKey;
+	console.log('Closed notification: ' + primaryKey);
+})
+
+self.addEventListener('notificationclick', event=>{
+	let notification = event.notification;
+	let action = event.action;
+	if(event.action === 'close'){
+		notification.close();
+	} else {
+		clients.openWindow('http://127.0.0.1:8080/another-blog.html');
+		notification.close();
+	}
+})
