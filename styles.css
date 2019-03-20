@@ -54,12 +54,19 @@ width: 100%;
     width: 85%;
     margin: 6px auto;
   }
+
+  img {
+    width: 85%;
+  }
 }
 
 @media only screen and (max-width: 960px){
   .main-container {
     width: 75%;
     margin: 6px auto;
+  }
+  img {
+    width: 75%;
   }
 }
 
@@ -68,10 +75,17 @@ width: 100%;
     width: 65%;
     margin: 6px auto;
   }
+  img {
+    width: 65%;
+  }
+}
 
 @media only screen and (max-width:550px){
   .main-container {
     width: 55%;
     margin: 6px auto;
+  }
+  img {
+    width: 85%;
   }
 }
